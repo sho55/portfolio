@@ -1,0 +1,847 @@
+#home #main .main_mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1
+}
+
+*{
+font-family: '游明朝',YuMincho,'Hiragino Mincho ProN','Hiragino Mincho Pro','ＭＳ 明朝',serif!important;
+}
+
+section{
+  margin: 10px 15% 20px 15%;
+}
+
+
+/*header*/
+
+.box {
+ width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url('./mov/header.mp4');
+
+}
+@media screen and (max-width: 320px) and (max-width: 480px) {
+  .box {
+    width: 120vw;
+    height: 120vh;
+  }
+}
+
+video {
+  /*width: 120vw;*/
+  height: 120vh;
+  opacity: 0.6;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.box__area {
+  height: 100vh;
+  overflow-y: auto;
+
+  /* スクロールのスナップ位置を100vhごとに設定 */
+  -webkit-scroll-snap-points-y: repeat(100vh);
+  -ms-scroll-snap-points-y: repeat(100vh);
+  scroll-snap-points-y: repeat(100vh);
+
+  /* スナップ位置に強制的にスクロール */
+  -webkit-scroll-snap-type: mandatory;
+  -ms-scroll-snap-type: mandatory;
+  scroll-snap-type: mandatory;
+}
+
+
+
+a#com-name {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:380px;
+    height:60px;
+    padding:0 1rem;
+    line-height:60px;
+    text-align:center;
+    border:2px solid #fff;
+    font-size:30px;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:sans-serif;
+    color:#fff;
+    overflow:hidden;
+    z-index: 10;
+}
+
+a#com-name span  {
+    display:inline-block;
+    transition:0.5s;
+}
+a#com-name span:nth-child(odd):before {
+    content:attr(data-text);
+    position:absolute;
+    transform:translateY(100%);
+}
+a#com-name span:nth-child(odd){
+    transform:translateY(-100%);
+}
+a#com-name:hover span:nth-child(odd){
+    transform:translateY(0);
+    color:#ff0;
+}
+a#com-name span:nth-child(even):before {
+    content:attr(data-text);
+    position:absolute;
+    transform:translateY(-100%);
+}
+
+a#com-name span:nth-child(even){
+    transform:translateY(100%);
+}
+a#com-name:hover span:nth-child(even){
+    transform:translateY(0);
+    color:#ff0;
+}
+/*intro*/
+#introduction{
+  width: 70%;
+}
+
+h2{
+  text-align: center;
+  padding: 50px 0px 100px 0px;
+}
+
+.main_conts{
+  display: table;
+  width: 100%;
+  margin: 0 0 65px
+}
+.main_conts div{
+  width: 50%;
+  display: table-cell;
+  vertical-align: middle
+
+}
+
+#text-cp{
+  font-size: 18px;
+}
+
+div.contents-right{
+  text-align: right;
+}
+
+div.contents-left {
+ width: 70%;
+
+}
+div.contents-left img {
+ width: 60%;
+}
+
+@media (min-width:769px) {
+  div.contents-left img {
+   width: 80%;
+  }
+}
+
+@media (min-width:641px) and (max-width:768px) {
+  div.contents-left img {
+   width: 80%;
+   display: block;
+  }
+}
+
+@media (max-width:640px) {
+  div.contents-left img {
+   width: 80%;
+   display: block;
+  }
+}
+
+.text-14{
+  font-size: 14px;
+}
+
+.var_line{
+  margin: 30px 30px;
+  padding: 10px;
+  border-left: thin ridge #000000;
+}
+
+.about_conts{
+  display: table;
+  width: 100%;
+  /*margin: 0 0 65px*/
+}
+.about_conts div{
+  width: 50%;
+  display: table-cell;
+  vertical-align: middle
+
+}
+
+/*movie*/
+#movie{
+  z-index: 2;
+}
+#movie video {
+  /*width: 120vw;*/
+ /* height: 120vh;*/
+  opacity: 1.0;
+}
+
+.box-2 {
+ width: 100vw;
+  height: auto;
+  /*min-height: 100vh;*/
+  background-size: cover;
+  background-position: center;
+  background-color: #0A59B2FF;
+}
+
+#contents-mov{
+  width: 70vw;
+  height: 70vh;
+}
+
+/*Quality*/
+
+.qulty_conts{
+  display: table;
+  width: 100%;
+  /*margin: 0 0 65px*/
+}
+
+.text-12{
+  font-size: 12px;
+}
+
+.qulty_conts div{
+  width: 50%;
+  display: table-cell;
+  vertical-align: middle;
+
+  line-height:25px;
+}
+
+div .link-mark {
+    color:#434343;
+    display: block;
+    width: 100%;
+    height: 20px;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+/*@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300);*/
+
+/** {
+  margin:0;
+  padding:0;
+  outline:none;
+  list-style:none;
+  text-decoration:none;
+  box-sizing:border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;  
+}
+
+body {
+  background: #202020;
+  font-family: 'Roboto', sans-serif;
+}*/
+
+.wrapper {
+  margin:0 auto;
+  width: 400px;
+  height: 100px;
+  position: relative;
+  top:50%;left:50%;
+  margin-left:-200px;
+  margin-top:-50px;
+}
+
+.wrapper a {
+  position: relative;
+  bottom: 0;
+  color: #495057;
+  height: 45px;
+  line-height: 45px;
+  position: absolute;
+  width: 100%;
+  padding: 0 0 0 20px;
+  font-size: 12px;
+  font-weight:700;
+  font-family: 'Arial';
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  transition:0.1s all ease-in;
+}
+.wrapper a span{
+  display: block;
+  width: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 10px;
+  height: 10px;
+  position: absolute;
+}
+
+.wrapper a span span{
+  background: url(http://thomaspodgro.com/source/arrow.png);
+  display: block;
+  width: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0px;
+  height: 10px;
+  opacity: 1;
+  position: absolute;
+}
+
+.wrapper a .arrow:before {
+  content:"";
+  background: url(http://thomaspodgro.com/source/arrow.png);
+  display: block;
+  width: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 10px;
+  height: 10px;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.wrapper a .arrow:after {
+  content:"";
+  background: url(http://thomaspodgro.com/source/arrow.png);
+  display: block;
+  width: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 20px;
+  height: 10px;
+  position: absolute;
+  opacity: 0.3;
+}
+
+.wrapper a:hover .arrow:before{
+  animation: animate-arrow-2 1s ease-in-out infinite 0.1s;
+}
+
+.wrapper a:hover .arrow:after{
+  animation: animate-arrow-3 1s ease-in-out infinite 0.2s;
+}
+
+.wrapper a:hover .arrow span{
+  animation: animate-arrow-1 1s ease-in-out infinite;
+}
+
+@keyframes animate-arrow-1 {
+  0%{transform:translateX(-40px);opacity: 0;}
+  70%,100%{transform:translateX(0px);opacity: 1;}
+}
+@keyframes animate-arrow-2 {
+  0%{transform:translateX(-20px);opacity: 0;}
+  70%,100%{transform:translateX(0px);opacity: 0.5;}
+}
+@keyframes animate-arrow-3 {
+  0%{transform:translateX(-10px);opacity: 0;}
+  70%,100%{transform:translateX(0px);opacity: 0.3;}
+}
+
+
+/*three things*/
+#three-things{
+  margin-top: 3em;
+  height: 20vh;
+}
+
+.thr-conts{
+  /*display: inline-block;*/
+  width: 100%;
+}
+
+.thr-conts button{
+ margin: 10px 25px;
+}
+
+#three-things a.push{
+  display: inline-block;
+  margin: 30px 50px 10px 50px;
+}
+
+/*one*/
+a#one {
+  display:block;
+  margin: 0 10px;
+  padding: 20px 0;
+  width: 200px;
+  font-weight: bold;
+  color: #FFF;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  transition: .2s ease-in-out;
+}
+
+a#one:active {
+  background: rgba(18, 41, 99, 1.);
+}
+
+#one {
+  text-indent: -9999em;
+}
+
+#one:before{
+  content: "失敗しない住宅購入の流れ";
+  padding-top: 16px;
+  width: 100%;
+  height: 100%;
+  color: #FFF;
+  text-indent: 0;
+  background: #0C69D4;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 0 #07407E;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  z-index: 2;
+  transition: .2s ease-in-out;
+  border-radius: 4px;
+}
+
+#one:hover:before {
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 0 #07407E;
+}
+
+/*two*/
+a#two {
+  display:block;
+  margin: 0 10px;
+  padding: 20px 0;
+  width: 200px;
+  font-weight: bold;
+  color: #FFF;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  transition: .2s ease-in-out;
+}
+
+a#two:active {
+  background: rgba(255, 255, 255, .5);
+}
+
+#two {
+  text-indent: -9999em;
+}
+
+#two:before{
+  content: "賢い住宅ローンの選び方";
+  padding-top: 16px;
+  width: 100%;
+  height: 100%;
+  color: #FFF;
+  text-indent: 0;
+  background: #0C69D4;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 0 #07407E;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  z-index: 2;
+  transition: .2s ease-in-out;
+  border-radius: 4px;
+}
+
+#two:hover:before {
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 0 #07407E;
+}
+
+/*three*/
+a#three {
+  display:block;
+  margin: 0 10px;
+  padding: 20px 0;
+  width: 200px;
+  font-weight: bold;
+  color: #FFF;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  transition: .2s ease-in-out;
+}
+
+a#three:active {
+  background: rgba(255, 255, 255, .5);
+}
+
+#three {
+  text-indent: -9999em;
+}
+
+#three:before{
+  content: "諸費用や税金はいくらかかる？";
+  padding-top: 16px;
+  width: 100%;
+  height: 100%;
+  color: #FFF;
+  text-indent: 0;
+  background: #0C69D4;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 0 #07407E;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  z-index: 2;
+  transition: .2s ease-in-out;
+  border-radius: 4px;
+}
+
+#three:hover:before {
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 0 #07407E;
+}
+
+/*buttons*/
+
+
+.button {
+  float: left;
+  min-width: 150px;
+  max-width: 250px;
+  display: inline-block;
+  margin: 1.5px 1em ;
+  padding: 1em 2em;
+  border: none;
+  background: none;
+  color: inherit;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button:focus {
+  outline: none;
+}
+.button > span {
+  vertical-align: middle;
+}
+
+/* Text color adjustments (we could stick to the "inherit" but that does not work well in Safari) */
+
+
+/* Pipaluk */
+.button--pipaluk {
+  width: 280px;
+  padding: 1.5em 4em;
+  color: #fff;
+}
+.button--pipaluk.button--inverted {
+  color: #7986cb;
+}
+.button--pipaluk::before,
+.button--pipaluk::after {
+  content: '';
+  border-radius: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.25, 0, 0.3, 1);
+}
+.button--pipaluk::before {
+  border: 2px solid #7986cb;
+}
+.button--pipaluk.button--inverted::before {
+  border-color: #fff;
+}
+.button--pipaluk::after {
+  background: #7986cb;
+}
+.button--pipaluk.button--inverted::after {
+  background: #fff;
+}
+.button--pipaluk:hover::before {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+.button--pipaluk::before,
+.button--pipaluk:hover::after {
+  -webkit-transform: scale3d(0.7, 0.7, 1);
+  transform: scale3d(0.7, 0.7, 1);
+}
+.button--pipaluk:hover::after {
+  background-color: #3f51b5;
+}
+.button--pipaluk.button--inverted:hover::after {
+  background-color: #fff;
+}
+
+.button--text-thick {
+  font-weight: 600;
+}
+
+/*topics*/
+
+#topics{
+margin-top: 10em;
+clear: left;
+}
+
+/* Ujarak */
+.button-2 {
+  /*text-align: center;*/
+  min-width: 150px;
+  max-width: 250px;
+  display: inline-block;
+  margin: 1.5px 1em ;
+  padding: 1em 2em;
+  border: none;
+  background: none;
+  color: inherit;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+border-radius: 4px;
+}
+.button-2:focus {
+  outline: none;
+}
+.button-2 > span {
+  vertical-align: middle;
+}
+
+.button--ujarak {
+  -webkit-transition: border-color 0.4s, color 0.4s;
+  transition: border-color 0.4s, color 0.4s;
+}
+.button--ujarak::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #37474f;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transform: scale3d(0.7, 1, 1);
+  transform: scale3d(0.7, 1, 1);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+  transition: transform 0.4s, opacity 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--ujarak.button--round-s::before {
+  border-radius: 2px;
+}
+.button--ujarak.button--inverted::before {
+  background: #7986CB;
+}
+.button--ujarak,
+.button--ujarak::before {
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--ujarak:hover {
+  color: #fff;
+  border-color: #37474f;
+}
+.button--ujarak.button--inverted:hover {
+  color: #37474F;
+  border-color: #fff;
+}
+.button--ujarak:hover::before {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* Borders */
+.button--border-thin {
+  border: 1px solid;
+}
+
+#all_topics{
+width:70vw;
+text-align: center;
+}
+
+#all_topics button{
+  cursor: pointer;
+}
+
+th, td {
+  font-size: 0.9em;
+  padding: 0.6em;
+}
+
+/*contact-form*/
+#contact-form{
+  background-color: #0A59B2;
+}
+
+
+.container {
+  /*max-width:1000px;*/
+  width:100%;
+  margin:0 auto;
+  position:relative;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact {
+  color: #ffffffe0;
+  background:#0A59B2;
+  padding:25px;
+  margin:50px 0;
+}
+
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+  width:100%;
+  border:1px solid #CCC;
+  border-radius: 4px;
+  background:#FFF;
+  margin:0 0 20px;
+  padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+  -webkit-transition:border-color 0.3s ease-in-out;
+  -moz-transition:border-color 0.3s ease-in-out;
+  transition:border-color 0.3s ease-in-out;
+  border:1px solid #AAA;
+}
+
+#contact textarea {
+  height:100px;
+  max-width:100%;
+  resize:none;
+}
+
+#contact button[type="submit"] {
+  cursor:pointer;
+  width:100%;
+  border:none;
+  background:#0CF;
+  color:#FFF;
+  margin:0 0 5px;
+  padding:10px;
+  font-size:15px;
+}
+
+#contact button[type="submit"]:hover {
+  background:#09C;
+  -webkit-transition:background 0.3s ease-in-out;
+  -moz-transition:background 0.3s ease-in-out;
+  transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+  outline:0;
+  border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
+}
+
+/*footer*/
+.text-20{
+  font-size: 20px;
+}
+
+
+.share_btn2{
+    display: inline-block;
+    text-decoration: none;
+    width: 50px;
+  margin:2px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 23px;
+  color:white;
+    border-radius: 12px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: bold;
+    transition: .3s;
+}
+.share_btn2 .fa {line-height:50px}
+.share_btn2:hover{
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+.share_btn2.shtw {background: #22b8ff;}
+.share_btn2.shfb {background: #6680d8;}
+
+.footer-menu a{
+  color: #434343;
+  margin: 5px 7px;
+}
